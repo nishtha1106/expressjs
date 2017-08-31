@@ -5,7 +5,7 @@ let router= express.Router();
 //for updating data
 router.put("/employee/:id", (req,res) =>{
 	console.log("updating employee");
-	Employee.findOneAndUpdate({
+	Employee.update({
 		_id:req.params.id
 		},
 		{$set:{ name:req.body.name, id:req.body.id}},
